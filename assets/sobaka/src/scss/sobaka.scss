@@ -1,0 +1,23 @@
+
+section.brand-label {
+  position: absolute;
+  top: 2px;
+  left: 20px;
+
+  img {
+    position: absolute;
+    height: 50px;
+    top: 0;
+  }
+
+  h1 {
+    position: absolute;
+    font-size: 13px;
+    top: -1px;
+    left: 12px;
+  }
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
