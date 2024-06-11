@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*!
+ * Copyright © Sergey Siunov. 2024
+ * email: <sergey@siunov.ru>
+ */
+@font-face {
+  font-display: block;
+  font-family: "sobaka-icons";
+  src: url("./fonts/sobaka-icons.woff2") format("woff2"), url("./fonts/sobaka-icons.woff") format("woff");
+}
+.si::before,
+[class^=si-]::before,
+[class*=" si-"]::before {
+  display: inline-block;
+  font-family: "sobaka-icons" !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.si-block-text::before {
+  content: "a";
+}
+
+.si-block-note::before {
+  content: "b";
+}
+
+.si-block-citate::before {
+  content: "c";
+}
+
+.si-save::before {
+  content: "d";
+}
+
+.si-settings::before {
+  content: "e";
+}
+
+.si-read::before {
+  content: "f";
+}
+
+.si-write::before {
+  content: "g";
+}
+
+.si-delete::before {
+  content: "h";
+}
+
+.si-arrow-down::before {
+  content: "i";
+}
+
+.si-arrow-up::before {
+  content: "j";
+}
+
+.si-block::before {
+  content: "k";
+}
+
+.si-insert-before::before {
+  content: "l";
+}
+
+.si-insert-after::before {
+  content: "m";
+}
+
+.si-insert-end::before {
+  content: "n";
+}
+
+.si-insert-begin::before {
+  content: "o";
+}
+
+/*# sourceMappingURL=sobaka-icons.css.map */
