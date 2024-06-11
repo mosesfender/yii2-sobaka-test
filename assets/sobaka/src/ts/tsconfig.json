@@ -1,0 +1,28 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "amd",
+    "target": "es6",
+    "removeComments": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "outFile": "../../dist/sobaka.js"
+  },
+  "files": [
+    "Intf.ts",
+    "../../dist/cookie.d.ts",
+    "common.ts",
+    "articles/uIntf.ts",
+    "articles/uArticleForm.ts",
+    "articles/uArticleBlockList.ts",
+    "articles/uArticleBlock.ts",
+    "articles/uAddLever.ts",
+    "articles/uArticleBlockLever.ts",
+    "langChoose.ts",
+    "uControlBlock.ts",
+    "app.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

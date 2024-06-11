@@ -1,7 +1,6 @@
 <?php
 
 /** @var yii\web\View $this */
-
 /** @var string $content */
 
 use app\assets\AppAsset;
@@ -11,9 +10,13 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
+use yii\web\User;
 
 AppAsset::register($this);
 SobakaAsset::register($this);
+
+/* @var User $comUser */
+$comUser = \yii::$app->user;
 
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
@@ -43,7 +46,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/svg+xml', 'href' => Yi
         [
             'options' => ['class' => 'navbar-nav'],
             'items'   => [
-                ['label' => 'Contact', 'url' => ['/site/contact']],
+                $comUser->can('super') ? ['label' => \yii::t('app', 'Users'),
+                                                        'url'   => ['/user/list']] : '',
+                $comUser->can('postList') ? ['label' => \yii::t('app', 'Posts'), 'url' => ['/article/list']] : '',
                 Yii::$app->user->isGuest
                     ? ['label' => \yii::t('app', 'Login'), 'url' => ['/default/login']]
                     : '<li class="nav-item">'
@@ -58,7 +63,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/svg+xml', 'href' => Yi
             ]
         ]
     );
+    echo $this->render('lang_choose');
     NavBar::end();
+
     ?>
 </header>
 

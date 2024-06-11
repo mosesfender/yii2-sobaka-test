@@ -4,11 +4,17 @@ namespace app\controllers;
 
 use app\components\ModelException;
 use app\models\LoginForm;
-use yii\base\UserException;
 use yii\web\Response;
 
 class DefaultController extends BaseController
 {
+    public function actions()
+    {
+        return [
+            'error' => ['class' => 'yii\web\ErrorAction'],
+        ];
+    }
+    
     
     public function actionIndex()
     {
@@ -41,11 +47,10 @@ class DefaultController extends BaseController
         ]);
     }
     
-    public function actionTest(){
-        $exc = ModelException::create('Model Except', [
-            'password' => 'Anyone pass',
-            'login' => 'Anyone login',
-        ]);
-        return $exc;
+    public function actionLogout()
+    {
+        \yii::$app->user->logout();
+        return $this->goHome();
     }
+    
 }

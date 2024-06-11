@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "blueimp-tmpl": "^3.20.0",
+    "bootstrap-icons": "^1.11.3"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30"
+  }
+}

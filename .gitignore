@@ -3,7 +3,6 @@
 
 # Node artifact files
 node_modules/
-dist/
 
 # Compiled Java class files
 *.class
@@ -30,7 +29,6 @@ composer.lock
 
 # Maven
 target/
-dist/
 
 # JetBrains IDE
 .idea/
@@ -71,3 +69,9 @@ tests/_support/_generated
 /vagrant/
 /mail/
 /views/site/
+/assets/dist/
+/widgets/ImgUpload/
+/vendor/
+/node_modules/
+/web/uploads/
+/commands/RbacController.php

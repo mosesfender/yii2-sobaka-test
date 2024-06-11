@@ -1,0 +1,58 @@
+@import "vars";
+@import "mixin";
+
+[is=mf-control-block],
+mf-control-block {
+  $width: 30vw;
+  position: fixed;
+  left: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  padding: 10px;
+  //background-color: #eee;
+  background: linear-gradient(90deg, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0.3));
+  box-shadow: $shadow;
+  transition: all .3s ease-in-out 0s;
+
+  &.expanded {
+    left: 100vw - $width;
+  }
+
+  dd {
+    $leverWidth: 48px;
+    $leverHeight: 48px;
+
+    position: absolute;
+    top: 0;
+    left: -$leverWidth;
+    width: $leverWidth;
+    height: $leverHeight;
+    @include border-radius-corners(50%, 0, 0, 50%);
+    cursor: pointer;
+    background-color: #fff;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    box-shadow: $shadow;
+  }
+
+  @media (min-width: 1400px) {
+    width: 10vw !important;
+    &.expanded {
+      left: 90vw !important;
+    }
+  }
+  @media (min-width: 980px) and (max-width: 1399px) {
+    width: 20vw !important;
+    &.expanded {
+      left: 80vw !important;
+    }
+  }
+  @media (max-width: 979px) {
+    width: 30vw !important;
+    &.expanded {
+      left: 70vw !important;
+    }
+  }
+}

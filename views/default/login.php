@@ -12,7 +12,7 @@ use yii\web\View;
  */
 
 
-$this->title = 'Вход';
+$this->title = \yii::t('app', 'Login');
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>
