@@ -10,7 +10,7 @@ node_modules/
 # composer vendor dir
 /vendor
 
-/runtime
+/runtime/*
 
 # composer itself is not needed
 composer.phar
